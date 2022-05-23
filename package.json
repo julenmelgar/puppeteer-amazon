@@ -1,0 +1,17 @@
+{
+  "name": "puppeteer-amazon-scraping",
+  "version": "1.0.0",
+  "description": "A little example of how to scrape the last 5 iPhone on Amazon with Node JS and Puppeteer.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/eugeniosegala/puppeteer-amazon-scraping#readme",
+  "dependencies": {
+    "puppeteer": "^14.1.1"
+  }
+}
