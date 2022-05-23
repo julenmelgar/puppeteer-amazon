@@ -1,5 +1,6 @@
 // load puppeteer
 const puppeteer = require('puppeteer');
+const fs = require('fs');
 const domain = "https://www.amazon.es";
 
 // IIFE
@@ -8,7 +9,7 @@ const domain = "https://www.amazon.es";
   try {
     // create a new browser instance
     const browser = await puppeteer.launch({
-      headless: false,
+      headless: true,
     });
 
     // create a page inside the browser;
@@ -63,12 +64,16 @@ const domain = "https://www.amazon.es";
       return a.price - b.price;
     }));
 
+    fs.writeFileSync('products.json', JSON.stringify(products.sort((a, b) => {
+      return a.price - b.price;
+    }), null, 2));
+
     // close the browser
     await browser.close();
 
   } catch (error) {
     // display errors
-    console.log(error)
+    console.log(error);
   }
 
 })();
