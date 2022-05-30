@@ -22,25 +22,25 @@ const domain = "https://getbootstrap.com/docs/4.0/examples/checkout/";
             waitUntil: 'networkidle2'
         });
 
-        await page.waitForSelector('.needs-validation');
+        // await page.waitForSelector('.needs-validation');
 
-        // Input text
-        await page.type('.needs-validation #firstName', 'Julen');
-        // Wait 2 seconds
-        await page.waitForTimeout(2000);
-        // Input select
-        await page.select('.needs-validation #country', 'United States');
-        // Input checkbox
-        await page.click('.needs-validation #same-address');
-        // Input radio
-        await page.click('.needs-validation #paypal');
-        // Wait 2 seconds
-        await page.waitForTimeout(2000);
-        // Button click
-        await page.click('.needs-validation .btn');
+        // // Input text
+        // await page.type('.needs-validation #firstName', 'Julen');
+        // // Wait 2 seconds
+        // await page.waitForTimeout(2000);
+        // // Input select
+        // await page.select('.needs-validation #country', 'United States');
+        // // Input checkbox
+        // await page.click('.needs-validation #same-address');
+        // // Input radio
+        // await page.click('.needs-validation #paypal');
+        // // Wait 2 seconds
+        // await page.waitForTimeout(2000);
+        // // Button click
+        // await page.click('.needs-validation .btn');
 
-        // close the browser
-        await browser.close();
+        // // close the browser
+        // await browser.close();
 
     } catch (error) {
         console.log(error);

@@ -49,7 +49,6 @@ const domain = "https://www.amazon.es";
 
       return links.map(link => {
         if (link.querySelector(".a-price-whole")) {
-
           return {
             name: link.querySelector("h2").textContent,
             url: link.querySelector(".a-link-normal.a-text-normal").href,
